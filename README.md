@@ -26,6 +26,19 @@ KUCC Mobile is an open-source cross-platform mobile application project for Kath
     - [ ] Event Calender
     - [ ] Admin Panel for managing events ( For admins and community coordinators )
 
+## How to run project?
+
+   - In Development: 
+      ``` flutter run --flavor development -t lib/main_development.dart ```
+
+   - In Production: 
+      ``` flutter run --flavor production -t lib/main_production.dart ```
+
+   If you are using an IDE then refer to their respective documentation for custom launch configurations. 
+   
+   For VSCode: [Read Docs](https://code.visualstudio.com/docs/editor/debugging#_launchjson-attributes)<br>
+   For Intellij:  [Read Docs](https://plugins.jetbrains.com/docs/intellij/run-configurations.html)
+   
 
 ## How to contribute?
 * [Submit bugs and feature requests](https://github.com/KUCC-1997/kucc-mobile/issues)
