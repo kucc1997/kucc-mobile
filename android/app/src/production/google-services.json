@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "225450818344",
+    "project_id": "kucc-prod",
+    "storage_bucket": "kucc-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225450818344:android:b2082267a97b79a2956e1d",
+        "android_client_info": {
+          "package_name": "np.edu.ku.kucc.kucc_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225450818344-4kuutgeu1jv4t142ud21mp1h0v7nv5d6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnm-xY7ZygcXwwFows6rsddvploJ8J6_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225450818344-4kuutgeu1jv4t142ud21mp1h0v7nv5d6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
