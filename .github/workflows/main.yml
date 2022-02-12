@@ -5,15 +5,35 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
+  
+  
 
-jobs:
-  analyse:
+jobs:      
+  analyse_and_build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
-      - name: Analyse Project
-        uses: invertase/github-action-dart-analyzer@v1
+
+      - uses: subosito/flutter-action@v1.5.3
+
+      - name: Install Dependencies
+        run: flutter packages get
+
+      - name: Format
+        run: flutter format --set-exit-if-changed lib test
+
+      - name: Analyze
+        run: flutter analyze lib test
+
+      - name: Run tests
+        run: flutter test --no-pub --coverage --test-randomize-ordering-seed random
+
+      
+      - name: Build APK
+        run: flutter build apk
+        
+      - name: Check Code Coverage
+        uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
         with:
-          fatal-infos: true
-          fatal-warnings: true
-          annotate: true
+          min_coverage: 0
