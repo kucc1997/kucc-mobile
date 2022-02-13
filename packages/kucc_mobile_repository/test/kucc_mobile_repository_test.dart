@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import '../lib/kucc_mobile_repository.dart';
+import 'package:kucc_mobile_repository/kucc_mobile_repository.dart';
 
 void main() {
   test('adds one to input values', () {
