@@ -1,7 +1,4 @@
 library kucc_mobile_firebase;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'firebase/authentication_firebase.dart';
+export 'firebase/community_firebase.dart';
