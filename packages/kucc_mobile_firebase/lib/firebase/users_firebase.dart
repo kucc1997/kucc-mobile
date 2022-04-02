@@ -1,5 +1,3 @@
-// TODO : Implement Users Firestore
-
 import 'dart:io';
 
 import 'package:kucc_mobile_data/kucc_mobile_data.dart';

@@ -7,7 +7,11 @@ class ScheduleFirebase implements ScheduleData {
 
   @override
   Stream<List<ScheduleModel>> getScheduleOfEvent(String eid) {
-    return _firebaseFirestore.collection('schedule').snapshots().asyncMap(
+    return _firebaseFirestore
+        .collection('schedule')
+        .where('event', isEqualTo: '/events/$eid')
+        .snapshots()
+        .asyncMap(
           (event) => List.from(
             event.docs.map(
               (e) => ScheduleModel.fromJson(

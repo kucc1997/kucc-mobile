@@ -24,7 +24,7 @@ class ScheduleModel extends Equatable {
   });
 
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [title, startTime, endTime, event, description];
 
   ScheduleModel copyWith({
     String? description,

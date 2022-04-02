@@ -10,14 +10,15 @@ part 'it_express_model.g.dart';
 @JsonSerializable()
 class ITExpressModel extends Equatable {
   final String title;
+  @JsonKey(name: 'url')
   final Uri pdf;
   final String year;
-  final String cover;
+  final String? cover;
   const ITExpressModel({
     required this.title,
     required this.pdf,
     required this.year,
-    required this.cover,
+    this.cover,
   });
 
   @override
@@ -28,8 +29,10 @@ class ITExpressModel extends Equatable {
     return 'ITExpressModel(title: $title, pdf: $pdf, year: $year, cover: $cover)';
   }
 
-  static ITExpressModel toJson(JsonMap json) => _$ITExpressModelFromJson(json);
-  JsonMap fromJson() => _$ITExpressModelToJson(this);
+  static ITExpressModel fromJson(JsonMap json) =>
+      _$ITExpressModelFromJson(json);
+
+  JsonMap toJson() => _$ITExpressModelToJson(this);
 
   ITExpressModel copyWith({
     String? title,
