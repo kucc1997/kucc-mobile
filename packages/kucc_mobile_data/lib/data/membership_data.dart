@@ -8,6 +8,8 @@ class MembershipUpdateFailed extends MembershipError {}
 
 class MembershipApplicationFailed extends MembershipError {}
 
+class MembershipDoesNotExistError extends MembershipError {}
+
 abstract class MembershipData {
   const MembershipData();
 

@@ -11,7 +11,9 @@ class UserDataFetchError extends UserDataError {}
 abstract class UserData {
   const UserData();
 
+  Future<void> setUserData(String uid, UserModel model);
+
   Future<UserModel> getUserData(String uid);
 
-  Future<void> updateProfilePhoto(File file, String uid);
+  Stream<double> updateProfilePhoto(File file, String uid);
 }
